@@ -4,7 +4,7 @@ using Annotations.Data;
 using var context = new BlackMesaContext();
 
 var results = context.Employees
-    .Include(e => e.Department)
+    .Include(e => e.Department) // join
     .OrderBy(e => e.LastName)
     .ToList();
 
